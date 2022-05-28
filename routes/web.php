@@ -14,6 +14,9 @@ use App\Http\Controllers\ImageController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+URL::forceScheme('https');
+
+
 Auth::routes();
 
 Route::view('/', 'pages.index')->name('index');

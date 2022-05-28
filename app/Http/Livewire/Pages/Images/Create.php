@@ -12,13 +12,13 @@ class Create extends Component
 {
     use WithFileUploads;
 
-
     public $photo, $image_model, $results;
 
     protected $rules = [
         'photo' => 'required|image'
     ];
 
+    protected $proxies = '*';
 
     protected $messages = [
         'photo.required' => 'Please select an image',

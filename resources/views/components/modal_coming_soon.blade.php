@@ -5,7 +5,7 @@
                     aria-label="Close"></button></div>
             <div class="modal-body">
                 <p>We are currently developing this feature. Want to contribute to the source code for this project?
-                    Visit our Github repository. <a href="https://github.com/IhsanDevs/Imgee.io" target="_blank">Click
+                    Visit our Github repository. <a href="https://github.com/IhsanDevs/Imgee" target="_blank">Click
                         here</a>.</p>
             </div>
             <div class="modal-footer"><button class="btn btn-light" type="button"

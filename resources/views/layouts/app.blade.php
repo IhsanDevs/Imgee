@@ -42,6 +42,7 @@
     </div>
 
     @include('components.footer')
+    @include('partials.scripts')
 </body>
 
 </html>

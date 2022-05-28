@@ -26,12 +26,7 @@ class ImageController extends Controller
      */
     public function create()
     {
-        if (Auth::check()) {
-            $this->middleware('verified');
-            return view('pages.images.create');
-        } else {
-            return view('pages.images.create');
-        }
+        return view('pages.images.create');
 
     }
 

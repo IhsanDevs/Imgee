@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageController;
+use Illuminate\Support\Facades\URL;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,11 @@ use App\Http\Controllers\ImageController;
 URL::forceScheme('https');
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::view('/', 'pages.index')->name('index');
 
-Route::view('/dashboard', 'pages.dashboard.index')->name('dashboard')->middleware('auth');
+Route::view('/dashboard', 'pages.dashboard.index')->name('dashboard')->middleware(['auth', 'verified']);
 
 Route::resource('image', ImageController::class)
                 ->parameters([

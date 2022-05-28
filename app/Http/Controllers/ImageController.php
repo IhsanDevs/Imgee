@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Image;
 use App\Http\Requests\StoreImageRequest;
 use App\Http\Requests\UpdateImageRequest;
+use Illuminate\Support\Facades\Auth;
 
 class ImageController extends Controller
 {
@@ -25,7 +26,13 @@ class ImageController extends Controller
      */
     public function create()
     {
-        return view('pages.images.create');
+        if (Auth::check()) {
+            $this->middleware('verified');
+            return view('pages.images.create');
+        } else {
+            return view('pages.images.create');
+        }
+
     }
 
     /**

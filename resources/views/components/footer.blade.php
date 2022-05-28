@@ -18,3 +18,4 @@
 @include('components.modal_terms')
 @include('components.modal_coming_soon')
 @include('components.modal_license')
+@include('components.modal_commit_list')

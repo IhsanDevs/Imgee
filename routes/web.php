@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\URL;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// URL::forceScheme('https');
+URL::forceScheme('https');
 
 
 Auth::routes(['verify' => true]);
